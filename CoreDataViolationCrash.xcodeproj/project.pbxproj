@@ -14,6 +14,10 @@
 		5E81D89E1D1407E9003BC0C4 /* CoreDataViolationCrash.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5E81D89C1D1407E9003BC0C4 /* CoreDataViolationCrash.xcdatamodeld */; };
 		5E81D8A01D1407E9003BC0C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E81D89F1D1407E9003BC0C4 /* Assets.xcassets */; };
 		5E81D8A31D1407E9003BC0C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E81D8A11D1407E9003BC0C4 /* LaunchScreen.storyboard */; };
+		5E81D8AE1D14082F003BC0C4 /* MyEntity+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E81D8AB1D14082F003BC0C4 /* MyEntity+CoreDataProperties.m */; };
+		5E81D8AF1D14082F003BC0C4 /* MyEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E81D8AD1D14082F003BC0C4 /* MyEntity.m */; };
+		5E81D8B31D140A29003BC0C4 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E81D8B21D140A29003BC0C4 /* SecondViewController.m */; };
+		5E81D8B61D14106F003BC0C4 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E81D8B51D14106F003BC0C4 /* CoreDataStack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,14 @@
 		5E81D89F1D1407E9003BC0C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E81D8A21D1407E9003BC0C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E81D8A41D1407E9003BC0C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E81D8AA1D14082F003BC0C4 /* MyEntity+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyEntity+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5E81D8AB1D14082F003BC0C4 /* MyEntity+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MyEntity+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5E81D8AC1D14082F003BC0C4 /* MyEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyEntity.h; sourceTree = "<group>"; };
+		5E81D8AD1D14082F003BC0C4 /* MyEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyEntity.m; sourceTree = "<group>"; };
+		5E81D8B11D140A29003BC0C4 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		5E81D8B21D140A29003BC0C4 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		5E81D8B41D14106F003BC0C4 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
+		5E81D8B51D14106F003BC0C4 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +56,7 @@
 		5E81D8841D1407E9003BC0C4 = {
 			isa = PBXGroup;
 			children = (
+				5E81D8B01D140839003BC0C4 /* Model */,
 				5E81D88F1D1407E9003BC0C4 /* CoreDataViolationCrash */,
 				5E81D88E1D1407E9003BC0C4 /* Products */,
 			);
@@ -62,13 +75,16 @@
 			children = (
 				5E81D8931D1407E9003BC0C4 /* AppDelegate.h */,
 				5E81D8941D1407E9003BC0C4 /* AppDelegate.m */,
+				5E81D8B41D14106F003BC0C4 /* CoreDataStack.h */,
+				5E81D8B51D14106F003BC0C4 /* CoreDataStack.m */,
 				5E81D8961D1407E9003BC0C4 /* ViewController.h */,
 				5E81D8971D1407E9003BC0C4 /* ViewController.m */,
+				5E81D8B11D140A29003BC0C4 /* SecondViewController.h */,
+				5E81D8B21D140A29003BC0C4 /* SecondViewController.m */,
 				5E81D8991D1407E9003BC0C4 /* Main.storyboard */,
 				5E81D89F1D1407E9003BC0C4 /* Assets.xcassets */,
 				5E81D8A11D1407E9003BC0C4 /* LaunchScreen.storyboard */,
 				5E81D8A41D1407E9003BC0C4 /* Info.plist */,
-				5E81D89C1D1407E9003BC0C4 /* CoreDataViolationCrash.xcdatamodeld */,
 				5E81D8901D1407E9003BC0C4 /* Supporting Files */,
 			);
 			path = CoreDataViolationCrash;
@@ -80,6 +96,18 @@
 				5E81D8911D1407E9003BC0C4 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5E81D8B01D140839003BC0C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5E81D8AA1D14082F003BC0C4 /* MyEntity+CoreDataProperties.h */,
+				5E81D8AB1D14082F003BC0C4 /* MyEntity+CoreDataProperties.m */,
+				5E81D8AC1D14082F003BC0C4 /* MyEntity.h */,
+				5E81D8AD1D14082F003BC0C4 /* MyEntity.m */,
+				5E81D89C1D1407E9003BC0C4 /* CoreDataViolationCrash.xcdatamodeld */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,7 +180,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E81D8AE1D14082F003BC0C4 /* MyEntity+CoreDataProperties.m in Sources */,
 				5E81D89E1D1407E9003BC0C4 /* CoreDataViolationCrash.xcdatamodeld in Sources */,
+				5E81D8AF1D14082F003BC0C4 /* MyEntity.m in Sources */,
+				5E81D8B61D14106F003BC0C4 /* CoreDataStack.m in Sources */,
+				5E81D8B31D140A29003BC0C4 /* SecondViewController.m in Sources */,
 				5E81D8981D1407E9003BC0C4 /* ViewController.m in Sources */,
 				5E81D8951D1407E9003BC0C4 /* AppDelegate.m in Sources */,
 				5E81D8921D1407E9003BC0C4 /* main.m in Sources */,
@@ -316,7 +348,8 @@
 				5E81D89D1D1407E9003BC0C4 /* CoreDataViolationCrash.xcdatamodel */,
 			);
 			currentVersion = 5E81D89D1D1407E9003BC0C4 /* CoreDataViolationCrash.xcdatamodel */;
-			path = CoreDataViolationCrash.xcdatamodeld;
+			name = CoreDataViolationCrash.xcdatamodeld;
+			path = CoreDataViolationCrash/CoreDataViolationCrash.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
