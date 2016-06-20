@@ -63,4 +63,10 @@ static NSManagedObjectContext* mainContext;
     }
 }
 
++ (NSManagedObjectContext*)privateContext {
+    NSManagedObjectContext* context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    context.parentContext = savingContext;
+    return context;
+}
+
 @end

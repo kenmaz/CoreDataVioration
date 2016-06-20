@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15E65" minimumToolsVersion="Automatic">
-    <entity name="MyEntity" representedClassName="MyEntity" syncable="YES">
-        <attribute name="someValue" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    <entity name="EntityA" representedClassName="EntityA" syncable="YES">
+        <attribute name="foo" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="EntityB" representedClassName="EntityB" syncable="YES">
+        <attribute name="bar" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="MyEntity" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="EntityA" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="EntityB" positionX="-63" positionY="-9" width="128" height="60"/>
     </elements>
 </model>

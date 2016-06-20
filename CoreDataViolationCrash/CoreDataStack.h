@@ -12,4 +12,5 @@
 @interface CoreDataStack : NSObject
 + (void)setup;
 + (NSManagedObjectContext*)mainContext;
++ (NSManagedObjectContext*)privateContext;
 @end
