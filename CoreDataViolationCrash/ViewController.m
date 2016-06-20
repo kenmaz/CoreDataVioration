@@ -15,7 +15,7 @@
 
 - (IBAction)buttonDidTap:(id)sender {
 
-    // insert EntityA (async)
+    // insert EntityA (asyn on previate context)
     
     NSManagedObjectContext* privateContext = [CoreDataStack privateContext];
     
@@ -36,42 +36,25 @@
         }];
     }];
     
-    
-    //upsert EntityB and fetch EntityA
-    
     NSManagedObjectContext* mainContext = [CoreDataStack mainContext];
-    [mainContext performBlock:^{
 
+    //fetch EntityB (asyn on main context)
+    
+    [mainContext performBlock:^{
         NSFetchRequest* req = [NSFetchRequest fetchRequestWithEntityName:@"EntityB"];
         NSError* error = nil;
         NSArray* results = [mainContext executeFetchRequest:req error:&error];
         NSLog(@"3. result:%zd", results.count);
-        
-        if (results.count == 0) {
-            NSEntityDescription* entBDesc = [NSEntityDescription entityForName:@"EntityB" inManagedObjectContext:mainContext];
-            EntityB* entB = [[EntityB alloc] initWithEntity:entBDesc insertIntoManagedObjectContext:mainContext];
-            entB.bar = @"bbb";
-            
-            NSError* error = nil;
-            [mainContext save:&error];
-            NSLog(@"4 save:%@ %@", mainContext, error);
-            
-            NSManagedObjectContext* parentContext = mainContext.parentContext;
-            [parentContext performBlockAndWait:^{
-                NSError* error = nil;
-                [parentContext save:&error];
-                NSLog(@"5. save:%@ %@", parentContext, error);
-            }];
-        }
     }];
+    
+    //fetch EntityA (asyn on main context)
     
     [mainContext performBlock:^{
         NSFetchRequest* req = [NSFetchRequest fetchRequestWithEntityName:@"EntityA"];
-        req.fetchBatchSize = 20;
-        req.predicate = [NSPredicate predicateWithFormat:@"foo = %@", @"wwww"];
-        req.sortDescriptors = @[[[NSSortDescriptor alloc] initWithKey:@"foo" ascending:NO]];
+        req.fetchBatchSize = 20; // If comment out this line, No break
+        req.predicate = [NSPredicate predicateWithFormat:@"foo = %@", @"wwww"]; // If comment out this line, No break
         NSError* error = nil;
-        NSArray* results = [mainContext executeFetchRequest:req error:&error];  ////// CRASH !!!!!
+        NSArray* results = [mainContext executeFetchRequest:req error:&error];  // ******* BREAK with __Multithreading_Violation_AllThatIsLeftToUsIsHonor__ !!!!! ********
         NSLog(@"7. result:%zd", results.count);
     }];
 }
