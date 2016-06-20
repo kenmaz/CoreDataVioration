@@ -8,18 +8,11 @@
 
 #import "AppDelegate.h"
 #import "CoreDataStack.h"
-#import <MagicalRecord/MagicalRecord.h>
-
-@interface AppDelegate ()
-
-@end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [CoreDataStack setup];
-    [MagicalRecord setupCoreDataStackWithStoreNamed:@"mr"];
     
     return YES;
 }
