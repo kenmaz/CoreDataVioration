@@ -15,7 +15,7 @@
 
 - (IBAction)buttonDidTap:(id)sender {
 
-    // insert EntityA
+    // insert EntityA (async)
     
     NSManagedObjectContext* privateContext = [CoreDataStack privateContext];
     
@@ -42,36 +42,26 @@
     NSManagedObjectContext* mainContext = [CoreDataStack mainContext];
     [mainContext performBlock:^{
 
-        // fetch EntityB
-        NSString* entBBar = nil;
-        {
-            NSFetchRequest* req = [NSFetchRequest fetchRequestWithEntityName:@"EntityB"];
-            NSError* error = nil;
-            NSArray* results = [mainContext executeFetchRequest:req error:&error];
-            NSLog(@"3. result:%zd", results.count);
+        NSFetchRequest* req = [NSFetchRequest fetchRequestWithEntityName:@"EntityB"];
+        NSError* error = nil;
+        NSArray* results = [mainContext executeFetchRequest:req error:&error];
+        NSLog(@"3. result:%zd", results.count);
+        
+        if (results.count == 0) {
+            NSEntityDescription* entBDesc = [NSEntityDescription entityForName:@"EntityB" inManagedObjectContext:mainContext];
+            EntityB* entB = [[EntityB alloc] initWithEntity:entBDesc insertIntoManagedObjectContext:mainContext];
+            entB.bar = @"bbb";
             
-            if (results.count > 0) {
-                EntityB* entB = results[0];
-                entBBar = entB.bar;
-                
-            } else {
-                NSEntityDescription* entBDesc = [NSEntityDescription entityForName:@"EntityB" inManagedObjectContext:mainContext];
-                EntityB* entB = [[EntityB alloc] initWithEntity:entBDesc insertIntoManagedObjectContext:mainContext];
-                entB.bar = @"bbb";
-                
+            NSError* error = nil;
+            [mainContext save:&error];
+            NSLog(@"4 save:%@ %@", mainContext, error);
+            
+            NSManagedObjectContext* parentContext = mainContext.parentContext;
+            [parentContext performBlockAndWait:^{
                 NSError* error = nil;
-                [mainContext save:&error];
-                NSLog(@"4 save:%@ %@", mainContext, error);
-                
-                NSManagedObjectContext* parentContext = mainContext.parentContext;
-                [parentContext performBlockAndWait:^{
-                    NSError* error = nil;
-                    [parentContext save:&error];
-                    NSLog(@"5. save:%@ %@", parentContext, error);
-                }];
-                
-                entBBar = entB.bar;
-            }
+                [parentContext save:&error];
+                NSLog(@"5. save:%@ %@", parentContext, error);
+            }];
         }
     }];
     
