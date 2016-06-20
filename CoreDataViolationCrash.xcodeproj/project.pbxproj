@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5E2C07D81D17EAF500AE049E /* EntityA+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2C07D11D17EAF500AE049E /* EntityA+CoreDataProperties.m */; };
-		5E2C07D91D17EAF500AE049E /* EntityA.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2C07D31D17EAF500AE049E /* EntityA.m */; };
-		5E2C07DA1D17EAF500AE049E /* EntityB+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2C07D51D17EAF500AE049E /* EntityB+CoreDataProperties.m */; };
-		5E2C07DB1D17EAF500AE049E /* EntityB.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2C07D71D17EAF500AE049E /* EntityB.m */; };
 		5E81D8921D1407E9003BC0C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E81D8911D1407E9003BC0C4 /* main.m */; };
 		5E81D8951D1407E9003BC0C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E81D8941D1407E9003BC0C4 /* AppDelegate.m */; };
 		5E81D8981D1407E9003BC0C4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E81D8971D1407E9003BC0C4 /* ViewController.m */; };
@@ -19,17 +15,13 @@
 		5E81D8A01D1407E9003BC0C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E81D89F1D1407E9003BC0C4 /* Assets.xcassets */; };
 		5E81D8A31D1407E9003BC0C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E81D8A11D1407E9003BC0C4 /* LaunchScreen.storyboard */; };
 		5E81D8B61D14106F003BC0C4 /* CoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E81D8B51D14106F003BC0C4 /* CoreDataStack.m */; };
+		5EBDB83D1D18072300F61585 /* EntityA.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDB8361D18072300F61585 /* EntityA.m */; };
+		5EBDB83E1D18072300F61585 /* EntityA+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDB8381D18072300F61585 /* EntityA+CoreDataProperties.m */; };
+		5EBDB83F1D18072300F61585 /* EntityB.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDB83A1D18072300F61585 /* EntityB.m */; };
+		5EBDB8401D18072300F61585 /* EntityB+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EBDB83C1D18072300F61585 /* EntityB+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5E2C07D01D17EAF500AE049E /* EntityA+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EntityA+CoreDataProperties.h"; sourceTree = "<group>"; };
-		5E2C07D11D17EAF500AE049E /* EntityA+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EntityA+CoreDataProperties.m"; sourceTree = "<group>"; };
-		5E2C07D21D17EAF500AE049E /* EntityA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityA.h; sourceTree = "<group>"; };
-		5E2C07D31D17EAF500AE049E /* EntityA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityA.m; sourceTree = "<group>"; };
-		5E2C07D41D17EAF500AE049E /* EntityB+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "EntityB+CoreDataProperties.h"; sourceTree = "<group>"; };
-		5E2C07D51D17EAF500AE049E /* EntityB+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "EntityB+CoreDataProperties.m"; sourceTree = "<group>"; };
-		5E2C07D61D17EAF500AE049E /* EntityB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntityB.h; sourceTree = "<group>"; };
-		5E2C07D71D17EAF500AE049E /* EntityB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntityB.m; sourceTree = "<group>"; };
 		5E81D88D1D1407E9003BC0C4 /* CoreDataViolationCrash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataViolationCrash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E81D8911D1407E9003BC0C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5E81D8931D1407E9003BC0C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -43,6 +35,14 @@
 		5E81D8A41D1407E9003BC0C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E81D8B41D14106F003BC0C4 /* CoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataStack.h; sourceTree = "<group>"; };
 		5E81D8B51D14106F003BC0C4 /* CoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataStack.m; sourceTree = "<group>"; };
+		5EBDB8351D18072300F61585 /* EntityA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntityA.h; path = CoreDataViolationCrash/EntityA.h; sourceTree = "<group>"; };
+		5EBDB8361D18072300F61585 /* EntityA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EntityA.m; path = CoreDataViolationCrash/EntityA.m; sourceTree = "<group>"; };
+		5EBDB8371D18072300F61585 /* EntityA+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EntityA+CoreDataProperties.h"; path = "CoreDataViolationCrash/EntityA+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5EBDB8381D18072300F61585 /* EntityA+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "EntityA+CoreDataProperties.m"; path = "CoreDataViolationCrash/EntityA+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5EBDB8391D18072300F61585 /* EntityB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntityB.h; path = CoreDataViolationCrash/EntityB.h; sourceTree = "<group>"; };
+		5EBDB83A1D18072300F61585 /* EntityB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EntityB.m; path = CoreDataViolationCrash/EntityB.m; sourceTree = "<group>"; };
+		5EBDB83B1D18072300F61585 /* EntityB+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "EntityB+CoreDataProperties.h"; path = "CoreDataViolationCrash/EntityB+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5EBDB83C1D18072300F61585 /* EntityB+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "EntityB+CoreDataProperties.m"; path = "CoreDataViolationCrash/EntityB+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,14 +102,14 @@
 		5E81D8B01D140839003BC0C4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5E2C07D01D17EAF500AE049E /* EntityA+CoreDataProperties.h */,
-				5E2C07D11D17EAF500AE049E /* EntityA+CoreDataProperties.m */,
-				5E2C07D21D17EAF500AE049E /* EntityA.h */,
-				5E2C07D31D17EAF500AE049E /* EntityA.m */,
-				5E2C07D41D17EAF500AE049E /* EntityB+CoreDataProperties.h */,
-				5E2C07D51D17EAF500AE049E /* EntityB+CoreDataProperties.m */,
-				5E2C07D61D17EAF500AE049E /* EntityB.h */,
-				5E2C07D71D17EAF500AE049E /* EntityB.m */,
+				5EBDB8351D18072300F61585 /* EntityA.h */,
+				5EBDB8361D18072300F61585 /* EntityA.m */,
+				5EBDB8371D18072300F61585 /* EntityA+CoreDataProperties.h */,
+				5EBDB8381D18072300F61585 /* EntityA+CoreDataProperties.m */,
+				5EBDB8391D18072300F61585 /* EntityB.h */,
+				5EBDB83A1D18072300F61585 /* EntityB.m */,
+				5EBDB83B1D18072300F61585 /* EntityB+CoreDataProperties.h */,
+				5EBDB83C1D18072300F61585 /* EntityB+CoreDataProperties.m */,
 				5E81D89C1D1407E9003BC0C4 /* CoreDataViolationCrash.xcdatamodeld */,
 			);
 			name = Model;
@@ -185,14 +185,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EBDB83D1D18072300F61585 /* EntityA.m in Sources */,
+				5EBDB8401D18072300F61585 /* EntityB+CoreDataProperties.m in Sources */,
 				5E81D89E1D1407E9003BC0C4 /* CoreDataViolationCrash.xcdatamodeld in Sources */,
-				5E2C07DA1D17EAF500AE049E /* EntityB+CoreDataProperties.m in Sources */,
-				5E2C07D91D17EAF500AE049E /* EntityA.m in Sources */,
-				5E2C07DB1D17EAF500AE049E /* EntityB.m in Sources */,
 				5E81D8B61D14106F003BC0C4 /* CoreDataStack.m in Sources */,
-				5E2C07D81D17EAF500AE049E /* EntityA+CoreDataProperties.m in Sources */,
+				5EBDB83F1D18072300F61585 /* EntityB.m in Sources */,
 				5E81D8981D1407E9003BC0C4 /* ViewController.m in Sources */,
 				5E81D8951D1407E9003BC0C4 /* AppDelegate.m in Sources */,
+				5EBDB83E1D18072300F61585 /* EntityA+CoreDataProperties.m in Sources */,
 				5E81D8921D1407E9003BC0C4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
