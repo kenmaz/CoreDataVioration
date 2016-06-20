@@ -78,7 +78,7 @@
     [mainContext performBlock:^{
         NSFetchRequest* req = [NSFetchRequest fetchRequestWithEntityName:@"EntityA"];
         req.fetchBatchSize = 20;
-        req.predicate = [NSPredicate predicateWithFormat:@"foo = %@", "wwww"];
+        req.predicate = [NSPredicate predicateWithFormat:@"foo = %@", @"wwww"];
         req.sortDescriptors = @[[[NSSortDescriptor alloc] initWithKey:@"foo" ascending:NO]];
         NSError* error = nil;
         NSArray* results = [mainContext executeFetchRequest:req error:&error];  ////// CRASH !!!!!
